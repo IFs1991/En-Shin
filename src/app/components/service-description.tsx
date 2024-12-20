@@ -1,10 +1,15 @@
 import React from 'react';
 
-const ServiceDescription: React.FC = () => {
+interface ServiceDescriptionProps {
+  title: string;
+  description: string;
+}
+
+const ServiceDescription: React.FC<ServiceDescriptionProps> = ({ title, description }) => {
   return (
-    <div>
-      {/* Add service description content here */}
-      <p>サービス内容の詳細を記述します。</p>
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
+      <p className="text-gray-700 text-center mb-8">{description}</p>
     </div>
   );
 };

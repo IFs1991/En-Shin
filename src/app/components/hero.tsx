@@ -5,7 +5,13 @@ import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ title, subtitle, description }) => {
   const { t } = useTranslation('common');
 
   return (
@@ -28,7 +34,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {t('hero.title')}
+          {title}
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl text-gray-700 mb-8 font-sf-pro-display"
@@ -36,7 +42,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          {t('hero.subtitle')}
+          {subtitle}
         </motion.p>
       </div>
     </section>

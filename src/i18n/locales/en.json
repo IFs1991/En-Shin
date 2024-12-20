@@ -1,6 +1,3 @@
-以下に、`src/i18n/locales/en.json`の実装を提案します：
-
-```json
 {
   "common": {
     "title": "En Shin - Acupuncture NFT Service",
@@ -16,3 +13,77 @@
   },
   "hero": {
     "mainCatchphrase": "Transform Your Wellness with En Shin",
+    "subCatchphrase": "Experience the future of acupuncture with blockchain technology."
+  },
+  "aboutSection": {
+    "title": "About En Shin",
+    "paragraph1": "En Shin is revolutionizing traditional acupuncture by integrating NFT technology. Our unique approach offers not just health benefits but also exclusive access and rewards for our community.",
+    "paragraph2": "We believe in combining ancient healing practices with modern innovation to provide a unique wellness experience."
+  },
+  "serviceDescription": {
+    "title": "Our Services",
+    "nftAcupuncture": {
+      "title": "NFT Acupuncture Treatment",
+      "description": "Experience personalized acupuncture sessions secured and enhanced by NFT technology."
+    },
+    "traditionalAcupuncture": {
+      "title": "Traditional Acupuncture",
+      "description": "Benefit from classic acupuncture techniques tailored to your health needs."
+    },
+    "onlineConsultation": {
+      "title": "Online Consultation",
+      "description": "Receive expert advice and personalized wellness plans from the comfort of your home."
+    }
+  },
+  "artistProfile": {
+    "title": "Meet Our Practitioner",
+    "name": "Dr. Ai Tanaka",
+    "credentials": "LAc, Dipl. OM",
+    "bio": "With over 10 years of experience, Dr. Tanaka specializes in holistic healing and integrates traditional methods with modern technology."
+  },
+  "pricePayment": {
+    "title": "Pricing & Payment",
+    "nftTicket": "NFT Treatment Ticket",
+    "traditionalSession": "Traditional Session",
+    "consultation": "Online Consultation",
+    "acceptPaymentMethods": "We accept various payment methods, including cryptocurrency for NFT transactions."
+  },
+  "nftTicket": {
+    "title": "About NFT Treatment Tickets",
+    "purchaseMethod": {
+      "title": "How to Purchase",
+      "description": "Easily purchase on NFT marketplaces like OpenSea."
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        "Improved body balance",
+        "Stress reduction",
+        "Enhanced natural healing ability"
+      ]
+    },
+    "exclusiveBenefits": {
+      "title": "Exclusive Benefits for NFT Holders",
+      "list": [
+        "Priority booking",
+        "Discounts on additional treatments",
+        "Free consultation with specialists"
+      ]
+    }
+  },
+  "footer": {
+    "contactInfo": "Contact Information",
+    "address": "123 Wellness Street, Tokyo, Japan",
+    "phone": "+81 3-1234-5678",
+    "email": "info@enshin.com",
+    "socialMedia": "Follow us on social media"
+  },
+  "therapist": {
+    "title": "Our Therapist",
+    "name": "Akira Tanaka",
+    "specialty": "Acupuncture and Moxibustion",
+    "experience": "Years of Experience",
+    "yearsOfExperience": "{{years}} Years",
+    "description": "Experienced acupuncturist specializing in holistic healing techniques"
+  }
+}

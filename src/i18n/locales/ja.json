@@ -1,18 +1,89 @@
-以下に、`src/i18n/locales/ja.json`の実装を提案します：
-
-```json
 {
   "common": {
-    "title": "えん鍼 - 次世代の鍼灸体験",
-    "description": "NFTと鍼灸の革新的な融合",
+    "title": "えん鍼 - 鍼灸NFTサービス",
+    "description": "NFTチケットによる革新的な鍼灸サービス",
     "contactButton": "お問い合わせ",
-    "bookNow": "今すぐ予約"
+    "bookNow": "予約はこちら"
   },
   "header": {
     "home": "ホーム",
-    "about": "サービス概要",
+    "about": "当院について",
     "services": "サービス",
-    "contact": "お問い合わせ"
+    "language": "言語"
   },
   "hero": {
-    "main
+    "mainCatchphrase": "えん鍼でウェルネスを革新",
+    "subCatchphrase": "ブロックチェーン技術で鍼灸の未来を体験してください。"
+  },
+  "aboutSection": {
+    "title": "えん鍼について",
+    "paragraph1": "えん鍼は、NFT技術を統合することにより、伝統的な鍼灸に革命を起こしています。私たち独自の取り組みは、健康上の利点だけでなく、コミュニティへの独占的なアクセスと報酬を提供します。",
+    "paragraph2": "私たちは、古代の癒しの практики と現代のイノベーションを組み合わせ、ユニークなウェルネス体験を提供すると信じています。"
+  },
+  "serviceDescription": {
+    "title": "当院のサービス",
+    "nftAcupuncture": {
+      "title": "NFT鍼灸治療",
+      "description": "NFT技術で保護・強化された、パーソナライズされた鍼灸セッションを体験してください。"
+    },
+    "traditionalAcupuncture": {
+      "title": "伝統鍼灸",
+      "description": "お客様の健康ニーズに合わせた伝統的な鍼灸技術の恩恵を受けてください。"
+    },
+    "onlineConsultation": {
+      "title": "オンライン相談",
+      "description": "ご自宅の快適さから専門家のアドバイスとパーソナライズされたウェルネスプランを入手してください。"
+    }
+  },
+  "artistProfile": {
+    "title": "施術者紹介",
+    "name": "田中 愛",
+    "credentials": "LAc, Dipl. OM",
+    "bio": "10年以上の経験を持つ田中愛は、ホリスティックヒーリングを専門とし、伝統的な方法と最新技術を統合しています。"
+  },
+  "pricePayment": {
+    "title": "料金とお支払い",
+    "nftTicket": "NFT施術チケット",
+    "traditionalSession": "伝統施術",
+    "consultation": "オンライン相談",
+    "acceptPaymentMethods": "NFT取引には暗号通貨を含む、様々なお支払い方法をご利用いただけます。"
+  },
+  "nftTicket": {
+    "title": "NFT施術券について",
+    "purchaseMethod": {
+      "title": "購入方法",
+      "description": "OpenSeaなどのNFTマーケットプレイスで簡単に購入できます。"
+    },
+    "benefits": {
+      "title": "施術後の変化",
+      "list": [
+        "身体のバランス改善",
+        "ストレス軽減",
+        "自然治癒力の向上"
+      ]
+    },
+    "exclusiveBenefits": {
+      "title": "NFT保有者限定特典",
+      "list": [
+        "優先予約",
+        "追加施術の割引",
+        "専門家との無料相談"
+      ]
+    }
+  },
+  "footer": {
+    "contactInfo": "お問い合わせ",
+    "address": "〒150-0001 東京都渋谷区神宮前５丁目５０−５",
+    "phone": "03-1234-5678",
+    "email": "info@enshin.com",
+    "socialMedia": "ソーシャルメディアでフォローしてください"
+  },
+  "therapist": {
+    "title": "施術者紹介",
+    "name": "田中 明",
+    "specialty": "鍼灸",
+    "experience": "経験年数",
+    "yearsOfExperience": "{{years}}年",
+    "description": "全人的な治療技術に特化した経験豊富な鍼灸師です。"
+  }
+}

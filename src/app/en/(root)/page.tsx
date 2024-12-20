@@ -1,47 +1,49 @@
+'use client';
+
 import React from 'react';
-import Hero from '@/app/components/hero';
-import ServiceDescription from '@/app/components/service-description';
-import NFTTicketDescription from '@/app/components/nft-ticket-description';
-import TherapistIntroduction from '@/app/components/therapist-introduction';
-import CTAButton from '@/app/components/cta-button';
+import Hero from '../../components/hero';
+import ServiceDescription from '../../components/service-description';
+import NFTTicketDescription from '../../components/nft-ticket-description';
+import TherapistIntroduction from '../../components/therapist-introduction';
+import CTAButton from '../../components/cta-button';
 import { useTranslation } from 'next-i18next';
 
-export default function EnglishHomePage() {
-  const { t } = useTranslation('en');
+export default function HomePage() {
+  const { t } = useTranslation('common');
+  const { t: tServices } = useTranslation('serviceDescription');
+  const { t: tNFT } = useTranslation('nftTicket');
+
+  const benefits = tNFT('benefits.list', { returnObjects: true }) as string[];
 
   return (
     <main className="min-h-screen bg-white">
       <section className="container mx-auto px-4">
-        <Hero 
+        <Hero
           title={t('hero.title')}
           subtitle={t('hero.subtitle')}
           description={t('hero.description')}
         />
 
-        <ServiceDescription 
-          title={t('service.title')}
-          description={t('service.description')}
-          features={t('service.features', { returnObjects: true })}
+        {Object.entries(tServices).map(([key, service], index) => (
+          <ServiceDescription
+            key={index}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+
+        <NFTTicketDescription
+          title={tNFT('title')}
+          description={tNFT('description')}
+          benefits={benefits}
         />
 
-        <NFTTicketDescription 
-          title={t('nft.title')}
-          description={t('nft.description')}
-          benefits={t('nft.benefits', { returnObjects: true })}
-        />
-
-        <TherapistIntroduction 
-          title={t('therapist.title')}
-          profiles={t('therapist.profiles', { returnObjects: true })}
-        />
+        <TherapistIntroduction />
 
         <div className="text-center my-12">
-          <CTAButton 
-            primaryText={t('cta.primary')}
-            secondaryText={t('cta.secondary')}
-          />
+          <CTAButton type="contact" />
         </div>
       </section>
     </main>
   );
-};
+}

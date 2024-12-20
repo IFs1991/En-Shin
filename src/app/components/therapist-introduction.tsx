@@ -31,41 +31,41 @@ const TherapistIntroduction: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12">
           {t('therapist.title')}
         </h2>
-        
+
         {therapists.map((therapist, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="flex flex-col md:flex-row items-center justify-center gap-8"
           >
             <div className="w-64 h-64 relative rounded-full overflow-hidden shadow-lg">
-              <Image 
-                src={therapist.imageUrl} 
+              <Image
+                src={therapist.imageUrl}
                 alt={therapist.name}
                 layout="fill"
                 objectFit="cover"
                 className="transition-transform duration-300 hover:scale-110"
               />
             </div>
-            
+
             <div className="max-w-xl text-center md:text-left">
               <h3 className="text-2xl font-semibold mb-4">
                 {therapist.name}
               </h3>
-              
+
               <div className="mb-4">
                 <span className="font-medium">
-                  {t('therapist.specialty')}: 
+                  {t('therapist.specialty')}:
                 </span>
                 {therapist.specialty}
               </div>
-              
+
               <div className="mb-4">
                 <span className="font-medium">
-                  {t('therapist.experience')}: 
+                  {t('therapist.experience')}:
                 </span>
                 {t('therapist.yearsOfExperience', { years: therapist.experience })}
               </div>
-              
+
               <p className="text-gray-600 leading-relaxed">
                 {therapist.description}
               </p>
@@ -78,22 +78,3 @@ const TherapistIntroduction: React.FC = () => {
 };
 
 export default TherapistIntroduction;
-
-{
-  "therapist": {
-    "title": "Our Therapist",
-    "name": "Akira Tanaka",
-    "specialty": "Acupuncture and Moxibustion",
-    "experience": "Years of Experience",
-    "yearsOfExperience": "{{years}} Years",
-    "description": "Experienced acupuncturist specializing in holistic healing techniques
-`ja.json`:
-"therapist": {
-    "title": "施術者紹介",
-    "name": "田中 明",
-    "specialty": "鍼灸",
-    "experience": "経験年数",
-    "yearsOfExperience": "{{years}}年",
-    "description": "全人的な治療技術に特化した経験豊富な鍼灸師です。"
-  }
-};
