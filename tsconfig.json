@@ -25,6 +25,9 @@
       ],
       "@/app/*": [
         "./src/app/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"    // この行を修正
       ]
     },
     "plugins": [

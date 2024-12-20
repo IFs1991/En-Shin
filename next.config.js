@@ -1,34 +1,37 @@
-// 国際化の設定をインポート
-// next-i18next.config.js からi18nの基本設定を読み込みます
-const { i18n } = require('./next-i18next.config');
+/** @type {import('next').NextConfig} */
 
-/**
- * Next.jsの設定ファイル
- * このファイルでは以下の設定を行います：
- * - 多言語対応（i18n）の設定
- * - その他のNext.js固有の設定
- */
-module.exports = {
-  // i18nの設定を拡張
-  i18n: {
-    // next-i18next.config.jsの基本設定を継承
-    ...i18n,
-    // デフォルトのロケールを日本語に設定
-    defaultLocale: 'ja',
-    // サポートする言語を定義
-    locales: ['en', 'ja'],
-    // 翻訳ファイルのパスを指定
-    localePath: './i18n/locales',
-    // ロケールの自動検出を有効化
-    localeDetection: true
-  },
+const { i18n: i18nConfig } = require('./next-i18next.config');
 
-  // 将来的な拡張のためのその他の設定をここに追加可能
+const nextConfig = {
+  // Reactの厳格モードを有効化
   reactStrictMode: true,
 
-  // 画像の最適化設定
+  // 国際化（i18n）の設定
+  i18n: {
+    defaultLocale: 'ja',
+    locales: ['en', 'ja'],
+    localeDetection: false
+  },
+
+  // 画像最適化の設定
   images: {
-    domains: [],  // 必要に応じて外部画像ドメインを追加
-    formats: ['image/webp']
-  }
-}
+    domains: [],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+
+  // 実験的機能の設定
+  experimental: {
+    // サーバーアクションの設定
+    serverActions: {
+      bodySizeLimit: '2mb'
+    }
+  },
+
+  // ビルド最適化の設定
+  swcMinify: true,
+  poweredByHeader: false
+};
+
+module.exports = nextConfig;

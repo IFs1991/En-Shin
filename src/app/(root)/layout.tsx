@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import LanguageSwitcher from '../components/language-switcher';
-import '../styles/global.css';
+import '../../styles/global.css';  // ここを修正
 
 export default function RootLayout({
   children
