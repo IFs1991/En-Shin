@@ -37,9 +37,9 @@
   },
   "artistProfile": {
     "title": "Meet Our Practitioner",
-    "name": "Dr. Ai Tanaka",
+    "name": "Futoshi Iwasawa",
     "credentials": "LAc, Dipl. OM",
-    "bio": "With over 10 years of experience, Dr. Tanaka specializes in holistic healing and integrates traditional methods with modern technology."
+    "bio": "With over 10 years of experience, Mr. Iwasawa specializes in holistic healing and integrates traditional methods with modern technology."
   },
   "pricePayment": {
     "title": "Pricing & Payment",
@@ -80,7 +80,7 @@
   },
   "therapist": {
     "title": "Our Therapist",
-    "name": "Akira Tanaka",
+    "name": "Futoshi Iwasawa",
     "specialty": "Acupuncture and Moxibustion",
     "experience": "Years of Experience",
     "yearsOfExperience": "{{years}} Years",

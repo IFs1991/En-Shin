@@ -28,17 +28,17 @@ const CTAButton: React.FC<CTAButtonProps> = ({ type, className = '' }) => {
   const { text, href, style } = buttonConfig[type];
 
   return (
-    <Link 
+    <Link
       href={href}
       className={`
-        px-6 py-3 
-        rounded-full 
-        transition-all 
-        duration-300 
-        ease-in-out 
-        text-center 
-        font-bold 
-        ${style} 
+        px-6 py-3
+        rounded-full
+        transition-all
+        duration-300
+        ease-in-out
+        text-center
+        font-bold
+        ${style}
         ${className}
       `}
     >
@@ -48,17 +48,3 @@ const CTAButton: React.FC<CTAButtonProps> = ({ type, className = '' }) => {
 };
 
 export default CTAButton;
-
-{
-  "cta": {
-    "contact": "Contact Us",
-    "purchase": "Purchase NFT Ticket"
-  }
-}
-
-{
-  "cta": {
-    "contact": "お問い合わせ",
-    "purchase": "NFT施術券を購入"
-  }
-};
