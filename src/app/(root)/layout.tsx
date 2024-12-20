@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '@/app/components/header';
-import Footer from '@/app/components/footer';
-import LanguageSwitcher from '@/app/components/language-switcher';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import LanguageSwitcher from '../components/language-switcher';
 import '@/styles/global.css';
 
-export default function RootLayout({ 
-  children 
-}: { 
-  children: React.ReactNode 
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
 }) {
   return (
     <html lang="ja">

@@ -1,6 +1,3 @@
-以下に、`src/app/components/artist-profile.tsx`の実装例を示します：
-
-```typescript
 'use client';
 
 import React from 'react';
@@ -27,7 +24,28 @@ const ArtistProfile: React.FC<ArtistProfileProps> = ({
   return (
     <div className="artist-profile">
       <div className="profile-header">
-        <Image 
-          src={profileImage} 
-          alt={`${name} プロフィール`} 
-          width={300
+        <Image
+          src={profileImage}
+          alt={`${name} プロフィール`}
+          width={300}
+          height={300}
+          className="profile-image"
+        />
+        <h3>{name}</h3>
+        <p className="specialty">{specialty}</p>
+      </div>
+      <div className="profile-details">
+        <h4>{t('artist-profile.experience')}</h4>
+        <p>{experience} {t('artist-profile.years')}</p>
+        <h4>{t('artist-profile.achievements')}</h4>
+        <ul>
+          {achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default ArtistProfile;

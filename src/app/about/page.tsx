@@ -20,7 +20,13 @@ const AboutPage: React.FC = () => {
 
       <section className="artist-profile">
         <h2>{t('artist-profile.title')}</h2>
-        <ArtistProfile />
+        <ArtistProfile
+          name="山田 太郎"
+          specialty="鍼灸治療"
+          experience={10}
+          profileImage="/images/taro.jpg"
+          achievements={["〇〇学会 優秀賞", "△△クリニック 院長"]}
+        />
       </section>
 
       <section className="price-payment">
@@ -38,35 +44,3 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
-
-{
-  "about": {
-    "title": "えん鍼について",
-    "subtitle": "革新的な鍼灸サービスの詳細",
-    "artist-profile": {
-      "title": "鍼灸師の紹介"
-    },
-    "price-payment": {
-      "title": "料金と支払い方法"
-    },
-    "cta": {
-      "contact": "お問い合わせ"
-    }
-  }
-}
-
-{
-  "about": {
-    "title": "About En-Shin",
-    "subtitle": "Details of our innovative acupuncture service",
-    "artist-profile": {
-      "title": "Acupuncturist Profile"
-    },
-    "price-payment": {
-      "title": "Pricing and Payment Methods"
-    },
-    "cta": {
-      "contact": "Contact Us"
-    }
-  }
-};

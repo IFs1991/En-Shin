@@ -20,12 +20,12 @@ const HomePage: React.FC = () => {
         </section>
 
         <section className="therapist-section">
-          <h2>{t('home.therapist_title')}</h2>
+          <h1>{t('home.therapist_title')}</h1>
           <TherapistIntroduction />
         </section>
 
         <section className="cta-section">
-          <CTAButton />
+          <CTAButton type="contact" />
         </section>
       </main>
     </div>
