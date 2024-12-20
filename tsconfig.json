@@ -21,13 +21,13 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "./src/components/*"
+        "./src/app/components/*"
       ],
       "@/app/*": [
         "./src/app/*"
       ],
       "@/styles/*": [
-        "./src/styles/*"    // この行を修正
+        "./src/styles/*"
       ]
     },
     "plugins": [

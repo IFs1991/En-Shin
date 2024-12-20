@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
@@ -13,13 +12,19 @@ interface NFTTicketDescriptionProps {
 const NFTTicketDescription: React.FC<NFTTicketDescriptionProps> = ({ title, description, benefits }) => {
   const { t } = useTranslation('common');
 
+  // 翻訳リストを安全に取得する関数
+  const getTranslatedList = () => {
+    const translatedList = t('nftTicket.exclusiveBenefits.list', { returnObjects: true });
+    // 配列でない場合は空配列を返す
+    return Array.isArray(translatedList) ? translatedList : [];
+  };
+
   return (
     <section className="nft-ticket-description">
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">
           {title}
         </h2>
-
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* NFTチケットの画像 */}
           <div className="flex justify-center">
@@ -31,7 +36,6 @@ const NFTTicketDescription: React.FC<NFTTicketDescriptionProps> = ({ title, desc
               className="rounded-lg shadow-lg"
             />
           </div>
-
           {/* NFTチケットの詳細説明 */}
           <div>
             <div className="space-y-6">
@@ -43,7 +47,6 @@ const NFTTicketDescription: React.FC<NFTTicketDescriptionProps> = ({ title, desc
                   {t('nftTicket.purchaseMethod.description')}
                 </p>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold mb-4">
                   Benefits
@@ -54,15 +57,14 @@ const NFTTicketDescription: React.FC<NFTTicketDescriptionProps> = ({ title, desc
                   ))}
                 </ul>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold mb-4">
                   {t('nftTicket.exclusiveBenefits.title')}
                 </h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  {(t('nftTicket.exclusiveBenefits.list', { returnObjects: true }) as string[]).map((benefit: string, index: number) => (
-                  <li key={index}>{benefit}</li>
-                ))}
+                  {getTranslatedList().map((benefit: string, index: number) => (
+                    <li key={index}>{benefit}</li>
+                  ))}
                 </ul>
               </div>
             </div>
