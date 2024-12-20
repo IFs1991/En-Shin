@@ -1,0 +1,87 @@
+えん鍼サービスのプロジェクト構造YAMLを更新します。元のYAMLの構造を維持しながら、実装されたファイルの内容を反映します。
+
+```yaml
+src:
+  structure.yaml:
+    content: |-
+      「えん鍼」サービス紹介HPの構造
+      - Appleのデザインを参考にレイアウト、色合い、構成を再現
+      - App Routerを使用
+      - サービス紹介に特化
+      - CTAボタンを配置
+      - 詳細なサービス概要を反映
+      - 英語と日本語の切り替え機能
+    dependency: []
+  app:
+    (root):
+      layout.tsx:
+        content: |-
+          ルートレイアウト
+          - 全体的なレイアウト構造の定義
+          - ヘッダー、フッター、言語切り替えコンポーネントの配置
+          - グローバルスタイルの適用
+          - メタデータの設定
+          - レスポンシブデザインの基本設定
+        dependency:
+          - src/app/components/header.tsx
+          - src/app/components/footer.tsx
+          - src/app/components/language-switcher.tsx
+      page.tsx:
+        content: |-
+          ホームページ
+          - メインコンテンツの表示
+          - サービス概要の説明
+          - NFT施術券の紹介
+          - 施術者の紹介
+          - 多言語対応
+          - 各セクションのコンポーネント統合
+        dependency:
+          - src/app/components/hero.tsx
+          - src/app/components/service-description.tsx
+          - src/app/components/nft-ticket-description.tsx
+          - src/app/components/therapist-introduction.tsx
+          - src/app/components/cta-button.tsx
+    about:
+      page.tsx:
+        content: |-
+          サービス概要ページ
+          - サービスの詳細説明
+          - 鍼灸師の紹介
+          - 料金と支払い方法の説明
+          - 多言語対応
+          - セクション別のコンポーネント統合
+        dependency:
+          - src/app/components/about-content.tsx
+          - src/app/components/artist-profile.tsx
+          - src/app/components/price-payment.tsx
+    en:
+      (root):
+        page.tsx:
+          content: |-
+            英語版ホームページ
+            - 英語での全コンテンツ表示
+            - 多言語対応の実装
+            - 各セクションの英語翻訳
+            - コンポーネントの再利用
+          dependency:
+            - src/app/components/hero.tsx
+            - src/app/components/service-description.tsx
+            - src/app/components/nft-ticket-description.tsx
+            - src/app/components/therapist-introduction.tsx
+            - src/app/components/cta-button.tsx
+      about:
+        page.tsx:
+          content: |-
+            英語版サービス概要ページ
+            - 英語でのサービス詳細説明
+            - 鍼灸師紹介
+            - 料金と支払い方法の英語版
+          dependency:
+            - src/app/components/about-content.tsx
+            - src/app/components/artist-profile.tsx
+            - src/app/components/price-payment.tsx
+    components:
+      about-content.tsx:
+        content: |-
+          サービス概要コンテンツ
+          

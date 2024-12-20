@@ -1,0 +1,18 @@
+以下に、`src/i18n/locales/en.json`の実装を提案します：
+
+```json
+{
+  "common": {
+    "title": "En Shin - Acupuncture NFT Service",
+    "description": "Innovative acupuncture service with NFT tickets",
+    "contactButton": "Contact Us",
+    "bookNow": "Book Now"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "language": "Language"
+  },
+  "hero": {
+    "mainCatchphrase": "Transform Your Wellness with En Shin",

@@ -1,0 +1,18 @@
+以下に、`src/i18n/locales/ja.json`の実装を提案します：
+
+```json
+{
+  "common": {
+    "title": "えん鍼 - 次世代の鍼灸体験",
+    "description": "NFTと鍼灸の革新的な融合",
+    "contactButton": "お問い合わせ",
+    "bookNow": "今すぐ予約"
+  },
+  "header": {
+    "home": "ホーム",
+    "about": "サービス概要",
+    "services": "サービス",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "main
