@@ -26,16 +26,12 @@ const AboutContent: React.FC<AboutContentProps> = ({ className = '' }) => {
           <div className="service-approach">
             <h3>{t('serviceDetails.approach.title')}</h3>
             <p>{t('serviceDetails.approach.description')}</p>
-            <ul>
-              {t('serviceDetails.approach.keyPoints', { returnObjects: true }).map((point: string, index: number) => (
-                <li key={index}>{point}</li>
-              ))}
-            </ul>
+            <p>{t('serviceDetails.approach.keyPoints')}</p>
           </div>
 
           <div className="unique-value-proposition">
             <h3>{t('serviceDetails.uniqueValueProposition.title')}</h3>
-            <p>{t('serviceDetails.uniqueValueProposition.description')}</p>
+            <p>{t('uniqueValueProposition.description')}</p>
           </div>
         </div>
       </section>
@@ -56,43 +52,3 @@ const AboutContent: React.FC<AboutContentProps> = ({ className = '' }) => {
 };
 
 export default AboutContent;
-
-{
-  "about": {
-    "serviceBackground": {
-      "title": "サービスの背景",
-      "description": "えん鍼のサービスは..."
-    },
-    "serviceDetails": {
-      "title": "サービス詳細",
-      "philosophy": {
-        "title": "私たちの理念",
-        "description": "..."
-      },
-      "approach": {
-        "title": "アプローチ",
-        "description": "...",
-        "keyPoints": [
-          "ポイント1",
-          "ポイント2",
-          "ポイント3"
-        ]
-      },
-      "uniqueValueProposition": {
-        "title": "私たちの独自の価値提案",
-        "description": "..."
-      }
-    },
-    "missionAndVision": {
-      "title": "ミッションとビジョン",
-      "mission": {
-        "title": "ミッション",
-        "description": "..."
-      },
-      "vision": {
-        "title": "ビジョン",
-        "description": "..."
-      }
-    }
-  }
-};
