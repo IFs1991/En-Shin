@@ -60,9 +60,9 @@ const NFTTicketDescription: React.FC<NFTTicketDescriptionProps> = ({ title, desc
                   {t('nftTicket.exclusiveBenefits.title')}
                 </h3>
                 <ul className="list-disc list-inside text-gray-600 space-y-2">
-                  {t('nftTicket.exclusiveBenefits.list', { returnObjects: true }).map((benefit: string, index: number) => (
-                    <li key={index}>{benefit}</li>
-                  ))}
+                  {(t('nftTicket.exclusiveBenefits.list', { returnObjects: true }) as string[]).map((benefit: string, index: number) => (
+                  <li key={index}>{benefit}</li>
+                ))}
                 </ul>
               </div>
             </div>
